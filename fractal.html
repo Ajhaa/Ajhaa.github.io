@@ -11,6 +11,16 @@
     <a href="plant.html">plant</a>
     <h3>Fractal tree</h3>
     <canvas id="canvas" width="600" height="500"></canvas>
-    <script src="./fractal.js"></script>
+    <script src="./l_system.js">
+    </script>
+    <script>
+      let rules = { "1": "11", "0": "1[0]0" }
+      let draw_rules = { "1": ["draw"], 
+                         "0": ["draw_half"], 
+                         "[": ["push", "rotate_L"], 
+                         "]": ["pop", "rotate_R"]}
+                         
+      draw("0", 1440/4, 500, 4, rules, draw_rules, 45, 90, 7)
+    </script>
   </body>
 </html>

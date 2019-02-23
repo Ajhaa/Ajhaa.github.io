@@ -11,6 +11,15 @@
       <a href="plant.html">plant</a>
     <h3>Sierpinski triangle</h3>
     <canvas id="canvas" width="800" height="800"></canvas>
-    <script src="./sierpinski.js"></script>
+    <script src="./l_system.js"></script>
+    <script>
+      let rules = { "F": "F-G+F+G-F", "G": "GG" }
+      let draw_rules = { "F": ["draw"],
+                         "G": ["draw"], 
+                         "+": ["rotate_R"], 
+                         "-": ["rotate_L"]}
+                         
+      draw("F-G-G", 700, 100, 10, rules, draw_rules, 120, 180, 6)
+    </script>
   </body>
 </html>

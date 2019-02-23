@@ -11,6 +11,14 @@
       <a href="plant.html">plant</a>
     <h3>Koch curve</h3>
     <canvas id="canvas" width="1440" height="655"></canvas>
-    <script src="./koch.js"></script>
+    <script src="./l_system.js"></script>
+    <script>
+      let rules = { "F": "F+F-F-F+F" }
+      let draw_rules = { "F": ["draw"], 
+                         "+": ["rotate_L"], 
+                         "-": ["rotate_R"]}
+                         
+      draw("F", 1, 650, 4, rules, draw_rules, 90, 0, 5)
+    </script>
   </body>
 </html>
